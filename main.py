@@ -275,12 +275,8 @@ def about():
 def contact():
     return render_template("contact.html", current_user=current_user)
 
-# Optional: You can inclue the email sending code from Day 60:
-# DON'T put your email and password here directly! The code will be visible when you upload to Github.
-# Use environment variables instead (Day 35)
-
-# MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
-# MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
+MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
+MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
 
 # @app.route("/contact", methods=["GET", "POST"])
 # def contact():
@@ -301,3 +297,6 @@ def contact():
 
 if __name__ == "__main__":
     app.run(debug=False, port=5001)
+
+ufos=""
+ufos.month.value_counts().sort_index().rename(1:"Jan",2:"Feb",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"Sept",10:"Oct",11:"Nov",12:"Dec")
